@@ -81,3 +81,6 @@ Checked: all .py parse and all .ipynb are valid JSON (not executed).
 - Notebooks still reference non-repo locations: Figure_4D-F `Code_worksapce/IPA_results/...`, SuppFig_4 `Code_worksapce/excel_sheets/patient_metadata_V1.csv`; fonts in visium_plotting.py (`/home/plopez/software/fonts`); Functions/figs11_segmentation_helpers.py `CODE_ROOT` (used only for the git-commit provenance record).
 - Files referenced under AuxFiles that are not in the repo's AuxFiles: `marker genes_v3.xlsx` (SuppFig_1), `DEGs/` folder and `DEGs_*` / stats files (Figures 4, 5, SuppFigs 7, 9).
 - Import names that do not match files: SuppFig_1 imports `Marker_dotplot_fig` / `Marker_dotplot_fig_RN`, Figure_2_dotplots imports `Marker_dotplot_fig_RN`; the repo file is `Func_Marker_dotplot_fig.py`.
+
+## Marker dotplot module imports
+- SuppFig_1.py (lines 22, 569) and Figure_2_dotplots.ipynb: `import Marker_dotplot_fig[_RN] as ...` -> `import Func_Marker_dotplot_fig as ...` (aliases unchanged; the commented-out `#import Marker_dotplot_fig_RN` line left as is). Module sits at the code root, which is on sys.path via code_dir.

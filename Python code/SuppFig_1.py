@@ -19,7 +19,7 @@ code_dir="/projects/Pregnancy_placenta/Code_Publication/"
 sys.path.append(code_dir)
 import FigFunctions as func
 #import Marker_dotplot_fig_RN as func_dotplot
-import Marker_dotplot_fig as func_dotplot
+import Func_Marker_dotplot_fig as func_dotplot
 os.chdir("/projects/Pregnancy_placenta/Results/22_Final_figures/SuppFigure_1/")
 
 
@@ -566,7 +566,7 @@ marker_dotplot_code_dir = code_dir
 if marker_dotplot_code_dir not in sys.path:
     sys.path.append(marker_dotplot_code_dir)
 
-import Marker_dotplot_fig_RN as func_marker_dotplt
+import Func_Marker_dotplot_fig as func_marker_dotplt
 func_marker_dotplt = importlib.reload(func_marker_dotplt)
 
 marker_file_path = code_dir + "AuxFiles/marker genes_v4_PAL.xlsx"
