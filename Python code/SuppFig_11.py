@@ -1,19 +1,24 @@
 #!/usr/bin/env python3
-"""Run Figure S11 for every sample in thresholds.json.
+"""Run Figure S11 for every sample in AuxFiles/figs11_thresholds.json.
 
-Run: python run_figs11.py --run-id FigS11_run1
+Run: python SuppFig_11.py --run-id FigS11_run1
 
 segmentation -> corrected intensities -> cell gates -> cross-K.
-The two helper modules beside this script contain the processing functions.
+The two helper modules in the Functions/ directory contain the processing functions.
 """
 
 from pathlib import Path
 import argparse
+import sys
+
+code_dir = "/projects/Pregnancy_placenta/Code_Publication/"  # root of the code hierarchy
+HERE = Path(code_dir)
+sys.path.insert(0, str(HERE / 'Functions'))
 
 
 # SETTINGS: shared by every sample. The JSON supplies all sample-specific gates.
 # -----------------------------------------------------------------------------
-THRESHOLDS_FILE = Path(__file__).resolve().with_name('thresholds.json')
+THRESHOLDS_FILE = HERE / 'AuxFiles' / 'figs11_thresholds.json'
 CELLPOSE_VERSION = '4.0.6'
 ARCSINH_COFACTOR = 5.0
 ZSCORE_DDOF = 1

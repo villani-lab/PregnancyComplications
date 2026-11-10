@@ -13,7 +13,9 @@ import re
 from statsmodels.stats.multitest import multipletests
 import math
 
-code_path="/projects/Pregnancy_placenta/Code/Publication_code"
+import os
+# directory of this file = root of the code hierarchy (same location as code_dir in the figure scripts)
+code_dir = os.path.dirname(os.path.abspath(__file__)) + "/"
 
 
 # Compute clone proportion per sample
@@ -102,7 +104,7 @@ def test_enrichment_expanded_per_cluster(T_data, n_perm, title, onlyPlot=False, 
             # run "All" once, then per-condition in a loop
             results["All"] = permutation_test_cluster_enrichment_clone_weighted(df, sample_col="Sample",cluster_col=cluster_col, clone_col="clone", expanded_col="expanded", n_perm=n_perm, seed=1)
 
-            samp_cond = pd.read_csv(code_path+"/AuxFiles/sample_condition_list.csv")
+            samp_cond = pd.read_csv(code_dir+"AuxFiles/sample_condition_list.csv")
             for cond in samp_cond["Condition_group"].dropna().unique():
                 print(cond)
                 curr_samp = samp_cond.loc[samp_cond.Condition_group == cond, "Sample"]
@@ -438,7 +440,7 @@ def permute_cluster_labels_within_sample(df, rng, sample_col="sample", cluster_c
 # This function plots a given feature in a bosplot split by condition as defined int he condition-sampl convertion file
 def boxplot_feature(df, feature, title):
     # Collecting daat
-    samp_cond = pd.read_csv(code_path+"/AuxFiles/sample_condition_list.csv")
+    samp_cond = pd.read_csv(code_dir+"AuxFiles/sample_condition_list.csv")
     cond_grp = list(set(samp_cond["Condition_group"]))
     df_to_plot = pd.DataFrame()
     for cond in cond_grp:
@@ -590,7 +592,7 @@ def plot_expanded_grid(T_data, samp_cond_conv, out_pdf, nrows=3, ncols=3):
 # bottom annotation strip
 def create_annotation_bottom_plot(ax_ann, samples):
     # condition matrix for multi-label annotation
-    samp_cond = pd.read_csv(code_path + "/AuxFiles/sample_condition_list.csv")
+    samp_cond = pd.read_csv(code_dir + "AuxFiles/sample_condition_list.csv")
     condition_colors = dict(zip(["Cont_labored", "Cont_unlabored", 'Cont_PTB', "DM1", "FGR", "PrePE", "TermPE", "PTB"],
                                 ["#CCEA8D", "#A6BC09", "green", "#5DB3D8", "#FFC817", "#EF7E29", "#E53938", "#8F2F82"]))
 

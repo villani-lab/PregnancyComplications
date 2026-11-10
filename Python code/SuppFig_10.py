@@ -16,7 +16,7 @@ plt.rcParams['font.family'] = 'sans-serif'
 plt.rcParams['font.sans-serif'] = ['Arial']
 
 data_dir="/projects/Pregnancy_placenta/Results/21_Final_objects/"
-code_dir = "/projects/Pregnancy_placenta/Code/Publication_code/"
+code_dir="/projects/Pregnancy_placenta/Code_Publication/"
 sys.path.append(code_dir)
 import FigFunctions as func
 import Repertoire_functions as rep_func
@@ -244,7 +244,7 @@ comparisons = [["Cont_labored", "Cont_unlabored"],
                ["PTB","Cont_labored"],
                ["PrePE", "Cont_PTB"],
                ["PTB","Cont_unlabored"]]
-samp_cond = pd.read_csv(code_dir+"/AuxFiles/sample_condition_list.csv")
+samp_cond = pd.read_csv(code_dir+"AuxFiles/sample_condition_list.csv")
 shannon_withCond = samp_cond.merge(df_shannon, on="Sample", how="left")
 # removing samples that don't have shannon entropy due to too few clones
 shannon_withCond = shannon_withCond.loc[~shannon_withCond["Shannon"].isna(),:].copy()

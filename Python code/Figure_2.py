@@ -8,7 +8,8 @@ import pandas as pd
 import muon as mu
 from muon import MuData
 import matplotlib
-sys.path.append("/projects/Pregnancy_placenta/Code/Publication_code/")
+code_dir="/projects/Pregnancy_placenta/Code_Publication/"
+sys.path.append(code_dir)
 import FigFunctions as func
 
 sc.set_figure_params(vector_friendly=True, dpi_save=300)

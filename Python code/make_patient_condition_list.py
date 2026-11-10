@@ -12,7 +12,8 @@ import muon as mu
 import pandas as pd
 
 ALLCELLS_PATH = "/projects/Pregnancy_placenta/Results/21_Final_objects/GEO_objects/AllCells.h5mu"
-OUT_PATH = "/projects/Pregnancy_placenta/Code/Publication_code/AuxFiles/patient_condition_list.csv"
+code_dir="/projects/Pregnancy_placenta/Code_Publication/"
+OUT_PATH = code_dir + "AuxFiles/patient_condition_list.csv"
 
 # obs boolean column -> canonical Condition_group label (same 8 labels used everywhere else in
 # the repo, e.g. Functions.py's condition_colors / 24_Differential_abundance.py comparisons)

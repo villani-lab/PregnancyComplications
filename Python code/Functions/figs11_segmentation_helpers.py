@@ -453,8 +453,9 @@ def execution_record():
 
 
 def helper_fingerprints():
-    files = tuple(Path(__file__).with_name(name) for name in
-                  ('run_figs11.py', 'figs11_segmentation_helpers.py', 'figs11_analysis_helpers.py'))
+    files = (Path(__file__).resolve().parents[1] / 'SuppFig_11.py',
+             *(Path(__file__).with_name(name) for name in
+               ('figs11_segmentation_helpers.py', 'figs11_analysis_helpers.py')))
     return {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in files}
 
 

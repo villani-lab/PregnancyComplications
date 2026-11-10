@@ -15,7 +15,7 @@ matplotlib.rcParams['pdf.fonttype'] = 42
 plt.rcParams['font.family'] = 'sans-serif'
 plt.rcParams['font.sans-serif'] = ['Arial']
 
-code_dir="/projects/Pregnancy_placenta/Code/Publication_code"
+code_dir="/projects/Pregnancy_placenta/Code_Publication/"
 sys.path.append(code_dir)
 import FigFunctions as fig_func
 
@@ -101,14 +101,14 @@ for lin in lin_dict.keys():
     fig_func.DA_condition_groups(data,
                                  cluster_col='Cell_subset',
                                  comparisons = comparisons,
-                                 samp_condition_file= code_dir+"/AuxFiles/sample_condition_list.csv",
+                                 samp_condition_file= code_dir+"AuxFiles/sample_condition_list.csv",
                                  lineage= lin)
 lin="AllCells"
 data = mu.read("/projects/Pregnancy_placenta/Results/21_Final_objects/AllCells.h5mu")
 fig_func.DA_condition_groups(data,
                              cluster_col='Lineage',
                              comparisons = comparisons,
-                             samp_condition_file= code_dir+"/AuxFiles/sample_condition_list.csv",
+                             samp_condition_file= code_dir+"AuxFiles/sample_condition_list.csv",
                              lineage= lin)
 
 # Summarizing all DA - stats and frequencies
@@ -213,7 +213,7 @@ fig_func.multiDE_BarGrid(comparisons=comparisons,
                          pval_adj_thresh=0.15,
                          logFC_thresh=0.58,
                          pdf_name="3C_DE_unlabored_min50DEGs.pdf",
-                         path_to_stats=code_dir+"/AuxFiles/",
+                         path_to_stats=code_dir+"AuxFiles/",
                          xticks_fontsize=10,
                          mimDEGs_thresh=50, # include only populations with a minimum <mimDEGs_thresh> DEGs
                          onlyMinDEGsPop=True,

@@ -14,7 +14,8 @@ matplotlib.rcParams['pdf.fonttype'] = 42
 plt.rcParams['font.family'] = 'sans-serif'
 plt.rcParams['font.sans-serif'] = ['Arial']
 
-sys.path.append("/projects/Pregnancy_placenta/Code/Publication_code")
+code_dir="/projects/Pregnancy_placenta/Code_Publication/"
+sys.path.append(code_dir)
 import FigFunctions as fig_func
 
 # default lineage palette you provided
@@ -44,7 +45,7 @@ comparisons = ["PTB_vs_Cont_labored",
 fig_func.multiDA_BarGrid(
     comparisons=comparisons,
     pdf_name="Supp_DA_labored_and_PTBcont_onlySig.pdf",
-    path_to_stats="/projects/Pregnancy_placenta/Code/Publication_code/AuxFiles/",
+    path_to_stats=code_dir + "AuxFiles/",
     da_pval_thresh=0.05,  # This threshold is used to have a transparent fill for populations with pval< <thresh>
     onlyMinDAPop=True,   # include only populations with a (p_val<0.05) AND (FC>minDA_absFC_thresh) in ANY comparison
     minDA_absFC_thresh=0, # threshold applied to abs(log(FC))
@@ -67,7 +68,7 @@ fig_func.multiDE_BarGrid(comparisons=comparisons,
                          pval_adj_thresh=0.15,
                          logFC_thresh=0.58,
                          pdf_name="Supp_DE_labored_and_PTBcont_onlySig_min50DEGs.pdf",
-                         path_to_stats="/projects/Pregnancy_placenta/Code/Publication_code/AuxFiles/",
+                         path_to_stats=code_dir + "AuxFiles/",
                          xticks_fontsize=10,
                          mimDEGs_thresh=50, # include only populations with a minimum <mimDEGs_thresh> DEGs
                          onlyMinDEGsPop=True,

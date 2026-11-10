@@ -21,8 +21,8 @@ plt.rcParams['font.family'] = 'sans-serif'
 plt.rcParams['font.sans-serif'] = ['Arial']
 sc.set_figure_params(vector_friendly=True, dpi_save=400)
 
-code_path="/projects/Pregnancy_placenta/Code/Publication_code"
-sys.path.append(code_path)
+code_dir="/projects/Pregnancy_placenta/Code_Publication/"
+sys.path.append(code_dir)
 import Repertoire_functions as rep_func
 import FigFunctions as fig_func
 os.chdir("/projects/Pregnancy_placenta/Results/22_Final_figures/Figure_6/")
@@ -42,7 +42,7 @@ rep_func.calc_clone_percent(T_data["GEX"], sample_col='Sample', min_cell_expande
 #====================================================================================
 # Figure 6B) feature plots of expanded clones
 #====================================================================================
-samp_cond_conv = pd.read_csv(code_path+"/AuxFiles/sample_condition_list.csv")
+samp_cond_conv = pd.read_csv(code_dir+"AuxFiles/sample_condition_list.csv")
 
 T_data["GEX"].obs["expanded"] = pd.Categorical(T_data["GEX"].obs["expanded"].map({False: "No", True: "Yes"}))
 cond_conv = {'Cont_unlabored':'Control unlabored', 'Cont_labored':'Control labored', 'Cont_PTB':'Control PTB','PTB':"sPTB", 'TermPE':'Term PE', 'PrePE': 'Preterm PE', 'DM1':'DM1', 'FGR':'FGR'}
@@ -150,7 +150,7 @@ fig_func = importlib.reload(fig_func)
 
 t_data = mu.read(data_dir + "T_cells.h5mu")["GEX"]
 mMac_data = mu.read(data_dir + "mMac_Mon_12subsets.h5mu")["GEX"]
-gene_list = pd.read_excel(code_path + "/AuxFiles/exhaustion_inhibition_gene_list.xlsx", sheet_name="short_list")
+gene_list = pd.read_excel(code_dir + "AuxFiles/exhaustion_inhibition_gene_list.xlsx", sheet_name="short_list")
 subset_pairs = [(t_sub, my_sub) for my_sub in ["mMac_5"] for t_sub in ["mT_4_CD8_eff", "mT_9_CD4_eff"]]
 
 # Plot correlation scatter plots between 2 myeloid subsets and 3 T subsets

@@ -16,7 +16,7 @@ plt.rcParams['font.family'] = 'sans-serif'
 plt.rcParams['font.sans-serif'] = ['Arial']
 
 data_dir="/projects/Pregnancy_placenta/Results/21_Final_objects/"
-code_dir = "/projects/Pregnancy_placenta/Code/Publication_code/"
+code_dir="/projects/Pregnancy_placenta/Code_Publication/"
 sys.path.append(code_dir)
 import FigFunctions as func
 

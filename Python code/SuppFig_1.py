@@ -15,10 +15,8 @@ plt.rcParams['font.family'] = 'sans-serif'
 plt.rcParams['font.sans-serif'] = ['Arial']
 
 data_dir="/projects/Pregnancy_placenta/Results/21_Final_objects/"
-code_dir = "/projects/Pregnancy_placenta/Code/Publication_code/"
-code_dir2 = "/projects/Pregnancy_placenta/Code/Publication_code/Publication_code"
+code_dir="/projects/Pregnancy_placenta/Code_Publication/"
 sys.path.append(code_dir)
-sys.path.append(code_dir2)
 import FigFunctions as func
 #import Marker_dotplot_fig_RN as func_dotplot
 import Marker_dotplot_fig as func_dotplot
@@ -63,7 +61,7 @@ os.chdir("/projects/Pregnancy_placenta/Results/22_Final_figures/SuppFigure_1/")
 all_data = mu.read(data_dir+"/AllCells.h5mu")
 all_gex = all_data['GEX']  # gene expression
 all_ADT = all_data['ADT'] # protein
-strip_categories = func_dotplot.read_markers_dotplot(file_path= "/projects/Pregnancy_placenta/Code/Publication_code/AuxFiles/marker genes_v3.xlsx",
+strip_categories = func_dotplot.read_markers_dotplot(file_path= code_dir + "AuxFiles/marker genes_v3.xlsx",
                           lineage="All")
 
 clust_order = ['Trophoblasts',"EVT","Endothelial","dStromal","fPerivascular","fFibroblasts","HBC","Myeloid","T","NK","B_Plasma",'HSC','Other']
@@ -144,7 +142,7 @@ os.chdir("/projects/Pregnancy_placenta/Results/22_Final_figures/SuppFigure_1/")
 T_cell_data = mu.read(data_dir+"/T_cells.h5mu")
 T_gex = T_cell_data['GEX'].copy()  # gene expression
 T_ADT = T_cell_data['ADT'].copy() # protein
-strip_categories = func_dotplot.read_markers_dotplot(file_path= "/projects/Pregnancy_placenta/Code/Publication_code/AuxFiles/marker genes_v3.xlsx", lineage="T")
+strip_categories = func_dotplot.read_markers_dotplot(file_path= code_dir + "AuxFiles/marker genes_v3.xlsx", lineage="T")
 
 # ordering clusters
 clust_order = ["fT_8_CD8_naive","fT_3_CD4_naive","mT_1_CD4_eff","mT_7_CD8_eff_GZMB","mT_2_CD8_eff_GZMK","mT_4_CD8_eff_LAG3","mT_9_CD4_eff_CTLA4","mT_5_cycling","mT_15_CD4_CXCL13","mT_6_Treg","mT_12_MAIT","mT_10_gd_TRDV1_eff","T_11_gd_TRDV1_naive","mT_13_gd_DN_TRDV2-9","mT_14_gd_CD8_TRDV2-9"]
@@ -183,7 +181,7 @@ func_dotplot.dot_plot_with_umap_stack(
 NK_cell_data = mu.read(data_dir+"/NK.h5mu")
 NK_gex = NK_cell_data['GEX'].copy() # gene expression
 NK_ADT = NK_cell_data['ADT'].copy() # protein
-strip_categories = func_dotplot.read_markers_dotplot(file_path= "/projects/Pregnancy_placenta/Code/Publication_code/AuxFiles/marker genes_v3.xlsx",
+strip_categories = func_dotplot.read_markers_dotplot(file_path= code_dir + "AuxFiles/marker genes_v3.xlsx",
                           lineage="NK")
 
 clust_order = ['mNK_3_GNLY_KIR2DL4', 'mNK_2_CXCR4', 'fNK_4_TNF_KLRG1', 'NK_6_SELL_IL7R', 'NK_5_cycling','mNKT_7','fNKT_1_GZMB_GNLY', 'fNKT_8_PRDM16_KLRC4']
@@ -220,7 +218,7 @@ func_dotplot.dot_plot_with_umap_stack(
 DC_cell_data = mu.read(data_dir+"/DCs_6subsets.h5mu")
 DC_gex = DC_cell_data['GEX'].copy() # gene expression
 DC_ADT = DC_cell_data['ADT'].copy() # protein
-strip_categories = func_dotplot.read_markers_dotplot(file_path= "/projects/Pregnancy_placenta/Code/Publication_code/AuxFiles/marker genes_v3.xlsx",
+strip_categories = func_dotplot.read_markers_dotplot(file_path= code_dir + "AuxFiles/marker genes_v3.xlsx",
                           lineage="DCs")
 
 clust_order = ['fDC2', 'fDC3', 'mDC2/4', 'mDC1', 'mDC_mature',"pDC"]
@@ -262,7 +260,7 @@ fig, ax, pb_all = func_dotplot.dot_plot_with_umap_stack_efficient(
 mMac_data = mu.read(data_dir+"/mMac_Mon_12subsets.h5mu")
 mMac_gex = mMac_data['GEX'].copy() # gene expression
 mMac_ADT = mMac_data['ADT'].copy() # protein
-strip_categories = func_dotplot.read_markers_dotplot(file_path= "/projects/Pregnancy_placenta/Code/Publication_code/AuxFiles/marker genes_v3.xlsx",
+strip_categories = func_dotplot.read_markers_dotplot(file_path= code_dir + "AuxFiles/marker genes_v3.xlsx",
                           lineage="Mon_mMac")
 
 clust_order = ["Mon_1_CD14_CLEC4D","Mon_2_CD14_CXCL1","mMon_4_MS1","fDC_CLECL10A_S100A8","fMon_3_CD16","mMac_1_C3_LTC4S","mMac_2_MMP7_CHI3L1","mMac_7_APOE","mMac_4_NUPR1","mMac_6_CX3CR1","mMac_5_CXCL10_IDO1","mMac_3_MT-CO1"]
@@ -417,7 +415,7 @@ fig.savefig("UMAP_sub_lin_split_legend.pdf", bbox_inches="tight", bbox_extra_art
 HBC_data = mu.read(data_dir+"/HBC_13subsets.h5mu")
 HBC_gex = HBC_data['GEX'].copy() # gene expression
 HBC_ADT = HBC_data['ADT'].copy() # protein
-strip_categories = func_dotplot.read_markers_dotplot(file_path= "/projects/Pregnancy_placenta/Code/Publication_code/AuxFiles/marker genes_v3.xlsx",  lineage="HBC")
+strip_categories = func_dotplot.read_markers_dotplot(file_path= code_dir + "AuxFiles/marker genes_v3.xlsx",  lineage="HBC")
 
 clust_order = ['HBC_1_EGR1_PLA2G7', 'HBC_4_IL1B_MMP19', 'HBC_6_VIM_VMO1', 'HBC_13_S100A8','HBC_12_CXCL10','HBC_9_CXCL10_IFIT44','HBC_7_lncRNA',  'HBC_10_cycling', 'HBC_11', 'HBC_2_CXCL2_CXCL3', 'HBC_8_neuro', 'HBC_3','HBC_5']
 HBC_gex.obs["sub_lin2"] = pd.Categorical(HBC_gex.obs["sub_lin2"], ordered=True, categories=clust_order)
@@ -487,7 +485,7 @@ func.feature_plots_pdf(all_data["GEX"], mMac_genes + HBC_genes, title="mMac_HBC_
 B_plasma_data = mu.read(data_dir+"/B_plasma.h5mu")
 B_gex = B_plasma_data['GEX'].copy() # gene expression
 B_ADT = B_plasma_data['ADT'].copy() # protein
-strip_categories = func_dotplot.read_markers_dotplot(file_path= "/projects/Pregnancy_placenta/Code/Publication_code/AuxFiles/marker genes_v3.xlsx",  lineage="B_Plasma")
+strip_categories = func_dotplot.read_markers_dotplot(file_path= code_dir + "AuxFiles/marker genes_v3.xlsx",  lineage="B_Plasma")
 
 clust_order = ['fB_1_naive', 'fB_3_cycling', 'mB_2_memory', 'mPlasma']
 B_gex.obs["sub_lin2"] = pd.Categorical(B_gex.obs["sub_lin2"], ordered=True, categories=clust_order)
@@ -564,14 +562,14 @@ func_marker_dotplt.dot_plot_with_umap_stack(
 
 
 
-marker_dotplot_code_dir = "/projects/Pregnancy_placenta/Code/Figures"
+marker_dotplot_code_dir = code_dir
 if marker_dotplot_code_dir not in sys.path:
     sys.path.append(marker_dotplot_code_dir)
 
 import Marker_dotplot_fig_RN as func_marker_dotplt
 func_marker_dotplt = importlib.reload(func_marker_dotplt)
 
-marker_file_path = "/projects/Pregnancy_placenta/Code/Publication_code/AuxFiles/marker genes_v4_PAL.xlsx"
+marker_file_path = code_dir + "AuxFiles/marker genes_v4_PAL.xlsx"
 marker_dotplot_output_dir = "/projects/Pregnancy_placenta/Results/22_Final_figures_PAL/SupFig_Marker_Dotplots"
 
 
@@ -749,7 +747,7 @@ func_marker_dotplt.dot_plot_with_umap_stack(
 #=====================
 
 os.chdir("/projects/Pregnancy_placenta/Results/25_Review/R2_C3/")
-code_dir = "/projects/Pregnancy_placenta/Code/Publication_code/"
+code_dir="/projects/Pregnancy_placenta/Code_Publication/"
 
 data = mu.read("/projects/Pregnancy_placenta/Results/21_Final_objects/GEO_objects/AllCells.h5mu")
 obs = data["GEX"].obs[["Patient_ID", "Lineage", "Cell_subset", "Labor"]]  # only metadata is needed - no copying of the expression matrices
