@@ -1,3 +1,4 @@
+# Supp Fig 2) CellTypist comparison - cell label predictions between this dataset and published placenta references (dotplots)
 import scanpy as sc 
 import celltypist as ct 
 import pandas as pd 

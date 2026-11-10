@@ -21,7 +21,7 @@ work_dir = "/projects/Pregnancy_placenta/Results/22_Final_figures/SuppFigure_6/"
 os.chdir(work_dir)
 
 #==================================================================
-# SupFig 6 A-C: Additional comparisons for DA and DE
+# SupFig 9 A-C: Additional comparisons for DA and DE
 #==================================================================
 fig_func.doubleBarPlot_DA_DE(comp="DM1_vs_Cont_unlabored",
                        pval_adj_thresh=0.15,

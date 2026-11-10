@@ -135,7 +135,7 @@ pivot_df = pivot_df.sort_index(axis=1, level=0) # sort by comparison
 pivot_df.columns = [f"{comparison} : {stat}" for comparison, stat in pivot_df.columns]  # Flattening the multi-layer column names
 final = da_freq.merge(pivot_df, left_index=True, right_index=True, how="outer")
 
-final.to_excel("Table_S6.xlsx") # Table S5
+final.to_excel("Table_S7.xlsx") # Table S7
 da_freq.to_csv("all_frequencies.csv") # All DAs
 da_stats.to_csv("all_frequencies.csv") # All stats
 
