@@ -15,8 +15,8 @@ plt.rcParams['font.family'] = 'sans-serif'
 plt.rcParams['font.sans-serif'] = ['Arial']
 
 data_dir="/projects/Pregnancy_placenta/Results/21_Final_objects/"
-code_dir="/projects/Pregnancy_placenta/Code_Publication/"
-sys.path.append(code_dir)
+code_dir="/projects/Pregnancy_placenta/Code_Publication/Python/"
+sys.path.append(code_dir + "Functions/")
 import FigFunctions as func
 #import Marker_dotplot_fig_RN as func_dotplot
 import Func_Marker_dotplot_fig as func_dotplot
@@ -562,7 +562,7 @@ func_marker_dotplt.dot_plot_with_umap_stack(
 
 
 
-marker_dotplot_code_dir = code_dir
+marker_dotplot_code_dir = code_dir + "Functions/"
 if marker_dotplot_code_dir not in sys.path:
     sys.path.append(marker_dotplot_code_dir)
 
@@ -747,7 +747,7 @@ func_marker_dotplt.dot_plot_with_umap_stack(
 #=====================
 
 os.chdir("/projects/Pregnancy_placenta/Results/25_Review/R2_C3/")
-code_dir="/projects/Pregnancy_placenta/Code_Publication/"
+code_dir="/projects/Pregnancy_placenta/Code_Publication/Python/"
 
 data = mu.read("/projects/Pregnancy_placenta/Results/21_Final_objects/GEO_objects/AllCells.h5mu")
 obs = data["GEX"].obs[["Patient_ID", "Lineage", "Cell_subset", "Labor"]]  # only metadata is needed - no copying of the expression matrices

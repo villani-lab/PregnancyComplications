@@ -11,7 +11,7 @@ from pathlib import Path
 import argparse
 import sys
 
-code_dir = "/projects/Pregnancy_placenta/Code_Publication/"  # root of the code hierarchy
+code_dir = "/projects/Pregnancy_placenta/Code_Publication/Python/"  # root of the code hierarchy
 HERE = Path(code_dir)
 sys.path.insert(0, str(HERE / 'Functions'))
 

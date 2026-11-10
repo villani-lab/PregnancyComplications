@@ -14,8 +14,8 @@ from statsmodels.stats.multitest import multipletests
 import math
 
 import os
-# directory of this file = root of the code hierarchy (same location as code_dir in the figure scripts)
-code_dir = os.path.dirname(os.path.abspath(__file__)) + "/"
+# parent of Functions/ = root of the code hierarchy (same location as code_dir in the figure scripts)
+code_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + "/"
 
 
 # Compute clone proportion per sample

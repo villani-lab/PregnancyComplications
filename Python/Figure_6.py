@@ -21,8 +21,8 @@ plt.rcParams['font.family'] = 'sans-serif'
 plt.rcParams['font.sans-serif'] = ['Arial']
 sc.set_figure_params(vector_friendly=True, dpi_save=400)
 
-code_dir="/projects/Pregnancy_placenta/Code_Publication/"
-sys.path.append(code_dir)
+code_dir="/projects/Pregnancy_placenta/Code_Publication/Python/"
+sys.path.append(code_dir + "Functions/")
 import Repertoire_functions as rep_func
 import FigFunctions as fig_func
 os.chdir("/projects/Pregnancy_placenta/Results/22_Final_figures/Figure_6/")

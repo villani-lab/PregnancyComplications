@@ -20,7 +20,7 @@ os.chdir("/projects/Pregnancy_placenta/Results/25_Review/R1_C3_myeloid_abundnace
 
 DA_dir = "/projects/Pregnancy_placenta/Results/23_Supp_tables/DA/"
 # Patient_ID <-> Condition_group, many-to-many (a patient with both PrePE and FGR gets 2 rows)
-code_dir="/projects/Pregnancy_placenta/Code_Publication/"
+code_dir="/projects/Pregnancy_placenta/Code_Publication/Python/"
 PATIENT_CONDITION_FILE = code_dir + "AuxFiles/patient_condition_list.csv"
 
 # Controls first, then complications, so the HBC-down / mMac-up trend reads left-to-right

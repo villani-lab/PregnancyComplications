@@ -14,8 +14,8 @@ matplotlib.rcParams['pdf.fonttype'] = 42
 plt.rcParams['font.family'] = 'sans-serif'
 plt.rcParams['font.sans-serif'] = ['Arial']
 
-code_dir="/projects/Pregnancy_placenta/Code_Publication/"
-sys.path.append(code_dir)
+code_dir="/projects/Pregnancy_placenta/Code_Publication/Python/"
+sys.path.append(code_dir + "Functions/")
 import FigFunctions as fig_func
 
 # default lineage palette you provided
