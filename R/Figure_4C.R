@@ -18,7 +18,8 @@ suppressPackageStartupMessages({
 
 #### load functions ----
 #setwd("/projects/Pregnancy_placenta/Results/13_DE_PAL")
-source("/projects/Pregnancy_placenta/Code_PAL/Preg_placenta_R_codes/Figures/funcs_gene_pathway.R")
+code_dir="/projects/Pregnancy_placenta/Code_Publication/R/"
+source(paste0(code_dir, "Functions/funcs_gene_pathway.R"))
 
 
 # load directory of files ----

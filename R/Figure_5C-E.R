@@ -18,7 +18,8 @@ suppressPackageStartupMessages({
 
 # load functions ----
 #setwd("/projects/Pregnancy_placenta/Results/13_DE_PAL")
-source("/projects/Pregnancy_placenta/Code_PAL/Preg_placenta_R_codes/Figures/funcs_gene_pathway.R")
+code_dir="/projects/Pregnancy_placenta/Code_Publication/R/"
+source(paste0(code_dir, "Functions/funcs_gene_pathway.R"))
 
 
 # load directory of files ----
@@ -81,8 +82,8 @@ make_gene_overlap_summary_csv(
    save_long_csv = FALSE,
 )
 
-# Fig 5D - Cell Movement of Phagocytes
-
+# Fig 5C - Cell Movement of Phagocytes
+#===================================================================================================
 ## draw Heatmap
 mats = get_pathway_gene_heatmap_mats(
   path_of_interest = "Cell movement of phagocytes",

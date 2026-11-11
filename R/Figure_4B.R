@@ -1,6 +1,7 @@
 # Heatmap of IPA pathways enrichemnt results in PTB vs cont_PTB across cell types
 
-source("/projects/Pregnancy_placenta/Code_R/Figures/figure_functions.R")
+code_dir="/projects/Pregnancy_placenta/Code_Publication/R/"
+source(paste0(code_dir, "Functions/figure_functions.R"))
 code_path = "/projects/Pregnancy_placenta/Code_R/Figures/"
 setwd("/projects/Pregnancy_placenta/Results/22_Final_figures/Figure_4/")
 

@@ -7,7 +7,8 @@ library(stringr)
 library(dplyr)
 
 code_path="/projects/Pregnancy_placenta/Code_R/Figures/"
-source(paste0(code_path, "/figure_functions.R"))
+code_dir="/projects/Pregnancy_placenta/Code_Publication/R/"
+source(paste0(code_dir, "Functions/figure_functions.R"))
 setwd("/projects/Pregnancy_placenta/Results/22_Final_figures/Figure_5/")
 
 

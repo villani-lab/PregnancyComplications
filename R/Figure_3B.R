@@ -4,7 +4,8 @@ library(stringr)
 library(ComplexHeatmap)
 library(colorRamp2)
 
-source("/projects/Pregnancy_placenta/Code_R/Figures/FigFunctions_DA.R")
+code_dir="/projects/Pregnancy_placenta/Code_Publication/R/"
+source(paste0(code_dir, "Functions/FigFunctions_DA.R"))
 setwd("/projects/Pregnancy_placenta/Results/22_Final_figures/Figure_3/")
 
 all_da_stat = read.csv("/projects/Pregnancy_placenta/Results/22_Final_figures/DE_DA_results/all_DA_stats.csv")

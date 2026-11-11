@@ -9,7 +9,7 @@ library(reshape2)
 library(circlize)
 
 code_dir = "/projects/Pregnancy_placenta/Code_R/"
-source(paste0(code_dir, "/Figures/figure_functions.R"))
+source(paste0(code_dir, "/Functions/figure_functions.R"))
 
 #                                              DESeq2
 #----------------------------------------------------------------------------------------------------------------

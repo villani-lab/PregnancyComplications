@@ -9,7 +9,8 @@ library(dplyr)
 
 code_path="/projects/Pregnancy_placenta/Code_R/Figures/"
 code_path_PAL="/projects/Pregnancy_placenta/Code_PAL/Preg_placenta_R_codes/Figures"
-source(paste0(code_path_PAL, "/figure_functions.R"))
+code_dir="/projects/Pregnancy_placenta/Code_Publication/R/"
+source(paste0(code_dir, "Functions/figure_functions.R"))
 setwd("/projects/Pregnancy_placenta/Results/22_Final_figures_PAL/SupFig_DM1_FGR/")
 
 
