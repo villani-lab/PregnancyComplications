@@ -1,6 +1,16 @@
 # Purpose of Script ----
-# Figure S6: compare pathway results using unlabored and labored controls.
+# Supp Figure 7: compare pathway results using unlabored and labored controls (Venn diagram and shared-pathway Z-score scatter).
 # Run from the FigS6_code folder, either all at once or section by section.
+#
+# Documentation:
+# This script loads the study inputs, matches the control comparisons (unlabored vs labored),
+# applies |Z-score| > 2 and adjusted P < 0.25, and saves the Venn diagram, Z-score scatter and
+# source tables in `output/`. Results are counted separately for each pathway, cell population
+# and complication, across 103 manuscript-selected IPA terms, 35 populations (including SCT and
+# VCTccc), and five complications. The scatter requires adjusted P < 0.25 and numeric Z-scores
+# against both controls; colored points also pass both Z-score cutoffs. Reusable input checks
+# and formatting are in Functions/SuppFig_7_Venn_helper.R.
+# (This analysis was labelled "Figure S6" in the original code; it is Supp Fig 7 in the revised paper.)
 
 # Preparing Packages and Functions ----
 suppressPackageStartupMessages({
@@ -10,7 +20,8 @@ suppressPackageStartupMessages({
   library(systemfonts)
 })
 
-source("figS6_helper.R")
+code_dir="/projects/Pregnancy_placenta/Code_Publication/R/"
+source(paste0(code_dir, "Functions/SuppFig_7_Venn_helper.R"))
 
 # Load Variables ----
 project_dir <- "../../.."   # Folder containing IPA_results and rds_objects
@@ -263,7 +274,8 @@ save_complication_tables(pathway_results, selected_pathways, populations,
 write_tsv(source_check$checks, file.path(output_dir, "Raw_RDS_verification.tsv"))
 input_files <- c(canonical_file, disease_file, source_check$files,
                  "inputs/pathway_inventory.tsv", "inputs/cell_colors.tsv",
-                 "inputs/label_positions.tsv", "figS6_analysis.R", "figS6_helper.R")
+                 "inputs/label_positions.tsv", file.path(code_dir, "SuppFig_7_Venn_scatter.R"),
+                 file.path(code_dir, "Functions/SuppFig_7_Venn_helper.R"))
 write_tsv(data.frame(File = input_files, MD5 = unname(tools::md5sum(input_files))),
           file.path(output_dir, "Input_checksums.tsv"))
 write_tsv(data.frame(Adjusted_p_cutoff = padj_cutoff, Absolute_Z_cutoff = zscore_cutoff,

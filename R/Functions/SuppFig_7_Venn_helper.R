@@ -1,5 +1,9 @@
-# Helper Functions for Figure S6 ----
-# Sourced by figS6_analysis.R; this file does not run the analysis itself.
+# Helper Functions for Supp Figure 7 (Venn diagram and shared-pathway scatter) ----
+# Documentation: reusable input checks and figure formatting for R/SuppFig_7_Venn_scatter.R, which
+# loads the inputs, applies |Z-score| > 2 and adjusted P < 0.25 to the labored/unlabored control
+# comparisons and saves the Venn diagram, Z-score scatter and source tables (see that script).
+# (Labelled "Figure S6" in the original code; Supp Fig 7 in the revised paper.)
+# Sourced by SuppFig_7_Venn_scatter.R; this file does not run the analysis itself.
 # Sections: input names, TEST3 source checks, table exports, figure formatting.
 
 # Input Names ----
