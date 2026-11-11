@@ -1,6 +1,6 @@
 # Supp Fig 10I-J) Myeloid DE and DA summary heatmaps
 code_dir="/projects/Pregnancy_placenta/Code_Publication/R/"
-source(paste0(code_dir, "Functions/figure_functions.R"))
+source(paste0(code_dir, "Functions/DE_DA_functions.R"))
 setwd("/projects/Pregnancy_placenta/Results/22_Final_figures/SuppFigure_7/DEG_count/")
 
 # 1) DE summary
@@ -28,7 +28,7 @@ DA_all_res[DA_all_res >= 0.05] = 1 # not significant
 #myeloid_clust = c("fDC_CLECL10A_S100A8","fDC2","fDC3","HBC_1_PLA2G7","HBC_10_cycling", "HBC_11","HBC_2","HBC_3","HBC_4","HBC_5", "HBC_6","HBC_7_lncRNA","HBC_8_neuro","HBC_9_CXCL10_IFIT1", "mDC1",  "mDC2/4","mMon_4_MS1","Mon_1_CD14_CLEC4D","Mon_2_CD14_CXCL1","fMon_3_CD16",  "HBC_12_CXCL10" ,"HBC_13_S100A8","pDC","mMac_1_C3_LTC4S","mMac_2_MMP7_CHI3L1", "mMac_3_MT-CO1","mMac_4_NUPR1","mMac_5_CXCL10_IDO1","mMac_6_CX3CR1","mMac_7_APOE", "mDC_mature")
 DA_all_res = DA_all_res[clust_order,]
 
-source(paste0(code_dir, "Functions/figure_functions.R"))
+source(paste0(code_dir, "Functions/DE_DA_functions.R"))
 mat_values = c(0, max(DA_all_res))
 plot_heatmap(df=DA_all_res, lin_subset_df=lin_subset_degs, output_prefix="myeloid_DA_summary", mat_name = "pval",mat_values=mat_values, mat_colors= c("black", "white"), cluster_rows=F, pdf_width=7, pdf_height=15)
 

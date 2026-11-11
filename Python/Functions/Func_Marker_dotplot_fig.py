@@ -13,7 +13,10 @@ def read_markers_dotplot(file_path, lineage):
                                     "blocks": df_lin["Block"]})
     return(strip_cat)
 
-def dot_plot_with_umap_stack(
+# NOTE: marker-dotplot version (adds a UMAP title with the total cell count and its own styling options).
+# A different function with a similar purpose, dot_plot_umap_stack_general() in FigFunctions.py,
+# has a different set of arguments; the two are intentionally kept separate.
+def dot_plot_umap_stack_marker(
     rna_anndata,
     prot_anndata=None,
     groupby="Final_cluster",

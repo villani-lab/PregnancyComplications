@@ -8,7 +8,7 @@ library(dplyr)
 
 code_path="/projects/Pregnancy_placenta/Code_R/Figures/"
 code_dir="/projects/Pregnancy_placenta/Code_Publication/R/"
-source(paste0(code_dir, "Functions/figure_functions.R"))
+source(paste0(code_dir, "Functions/DE_DA_functions.R"))
 setwd("/projects/Pregnancy_placenta/Results/22_Final_figures/Figure_5/")
 
 
@@ -62,7 +62,7 @@ suppressPackageStartupMessages({
 
 # load functions ----
 #setwd("/projects/Pregnancy_placenta/Results/13_DE_PAL")
-source(paste0(code_dir, "Functions/funcs_gene_pathway.R"))
+source(paste0(code_dir, "Functions/pathway_gene_functions.R"))
 
 
 # load directory of files ----

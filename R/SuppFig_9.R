@@ -3,7 +3,7 @@
 # Section 1: Load helper functions
 
 code_dir="/projects/Pregnancy_placenta/Code_Publication/R/"
-source(paste0(code_dir, "Functions/funcs_supfig5_supfig6.R"))
+source(paste0(code_dir, "Functions/IPA_pathway_heatmap_functions.R"))
 
 
 # Section 2: Prepare Pathway Dataframes
@@ -285,7 +285,7 @@ library(dplyr)
 
 code_path="/projects/Pregnancy_placenta/Code_R/Figures/"
 code_path_PAL="/projects/Pregnancy_placenta/Code_PAL/Preg_placenta_R_codes/Figures"
-source(paste0(code_dir, "Functions/figure_functions.R"))
+source(paste0(code_dir, "Functions/DE_DA_functions.R"))
 setwd("/projects/Pregnancy_placenta/Results/22_Final_figures_PAL/SupFig_DM1_FGR/")
 
 

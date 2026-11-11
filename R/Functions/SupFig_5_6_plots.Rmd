@@ -21,7 +21,7 @@ suppressPackageStartupMessages({
 
 ```{r load functions}
 code_dir="/projects/Pregnancy_placenta/Code_Publication/R/"
-source(paste0(code_dir, "Functions/2_IPA_Helpful_functions.R"))
+source(paste0(code_dir, "Functions/IPA_pathway_heatmap_functions.R"))
 
 ```
 

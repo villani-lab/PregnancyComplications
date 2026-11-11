@@ -78,7 +78,7 @@ strip_categories = pd.DataFrame({
 import importlib
 func = importlib.reload(func)
 
-func.dot_plot_with_umap_stack(
+func.dot_plot_umap_stack_general(
     EVT_adata,
     prot_anndata= EVT_pdata,
     groupby="sub_lin",

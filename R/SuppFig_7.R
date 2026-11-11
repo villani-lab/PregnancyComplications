@@ -3,7 +3,7 @@
 # Section 1: Load helper functions
 
 code_dir="/projects/Pregnancy_placenta/Code_Publication/R/"
-source(paste0(code_dir, "Functions/funcs_supfig5_supfig6.R"))
+source(paste0(code_dir, "Functions/IPA_pathway_heatmap_functions.R"))
 
 
 # Section 2: Prepare Pathway Dataframes

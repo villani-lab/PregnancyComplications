@@ -30,7 +30,7 @@ read_pathway_genes = function(cell_type,
 
 # NOTE: this version takes an already-loaded IPA results data frame (df_pathway_genes, "diseases" or canonical
 # pathway table selected with diseases_or_pathway). A different function with a similar purpose that reads the
-# IPA export files from disk itself is get_log2fc_of_pathway_genes_from_IPA_files() in figure_functions.R;
+# IPA export files from disk itself is get_log2fc_of_pathway_genes_from_IPA_files() in DE_DA_functions.R;
 # the two are intentionally kept separate and have different arguments.
 get_log2fc_of_pathway_genes_from_df = function(path_int, #pathway of interest
                                        df_pathway_genes, #IPA results, has pathway info and molecules

@@ -75,7 +75,7 @@ all_ADT = all_ADT[:,proteins]
 cats = list(all_gex.obs["Lineage"].cat.categories)
 all_gex.uns["Lineage_colors"] = [_DEF_PALETTE[c] for c in cats]
 
-func_dotplot.dot_plot_with_umap_stack(
+func_dotplot.dot_plot_umap_stack_marker(
     rna_anndata=all_gex,
     prot_anndata= all_ADT,
     groupby="Lineage",
@@ -150,7 +150,7 @@ T_gex.obs["sub_lin2"] = pd.Categorical(T_gex.obs["sub_lin2"], ordered=True, cate
 T_ADT.obs["sub_lin2"].replace({"mT_9_CD4_act_CTLA4":"mT_9_CD4_eff_CTLA4", "mT_4_CD8_act":"mT_4_CD8_eff_LAG3"}, inplace=True)
 T_ADT.obs["sub_lin2"] = pd.Categorical(T_ADT.obs["sub_lin2"], ordered=True, categories=clust_order)
 
-func_dotplot.dot_plot_with_umap_stack(
+func_dotplot.dot_plot_umap_stack_marker(
     T_gex,
     prot_anndata= T_ADT,
     groupby="sub_lin2",
@@ -188,7 +188,7 @@ clust_order = ['mNK_3_GNLY_KIR2DL4', 'mNK_2_CXCR4', 'fNK_4_TNF_KLRG1', 'NK_6_SEL
 NK_gex.obs["sub_lin2"] = pd.Categorical(NK_gex.obs["sub_lin2"], ordered=True, categories=clust_order)
 NK_ADT.obs["sub_lin2"] = pd.Categorical(NK_ADT.obs["sub_lin2"], ordered=True, categories=clust_order)
 
-func_dotplot.dot_plot_with_umap_stack(
+func_dotplot.dot_plot_umap_stack_marker(
     NK_gex,
     prot_anndata= NK_ADT,
     groupby="sub_lin2",
@@ -536,7 +536,7 @@ strip_cat_villous_troph = func_marker_dotplt.read_markers_dotplot(file_path = ma
 
 # Plot
 os.chdir("/projects/Pregnancy_placenta/Results/22_Final_figures_PAL/SupFig_Marker_Dotplots")
-func_marker_dotplt.dot_plot_with_umap_stack(
+func_marker_dotplt.dot_plot_umap_stack_marker(
     troph_adata,
     prot_anndata=troph_pdata,
     groupby="sub_lin2",
@@ -581,7 +581,7 @@ strip_cat_endo = func_marker_dotplt.read_markers_dotplot(
     lineage="Endo")
 
 os.chdir(marker_dotplot_output_dir)
-func_marker_dotplt.dot_plot_with_umap_stack(
+func_marker_dotplt.dot_plot_umap_stack_marker(
     endo_subcluster['GEX'],
     prot_anndata=endo_subcluster['ADT'],
     groupby="sub_lin2",
@@ -615,7 +615,7 @@ strip_cat_fFB = func_marker_dotplt.read_markers_dotplot(
     lineage="fFB")
 
 os.chdir(marker_dotplot_output_dir)
-func_marker_dotplt.dot_plot_with_umap_stack(
+func_marker_dotplt.dot_plot_umap_stack_marker(
     fFB_subcluster['GEX'],
     prot_anndata=fFB_subcluster['ADT'],
     groupby="short_sublin2",
@@ -653,7 +653,7 @@ strip_cat_villous_troph = func_marker_dotplt.read_markers_dotplot(
     lineage="Villous_Troph")
 
 os.chdir(marker_dotplot_output_dir)
-func_marker_dotplt.dot_plot_with_umap_stack(
+func_marker_dotplt.dot_plot_umap_stack_marker(
     troph_adata,
     prot_anndata=troph_pdata,
     groupby="sub_lin2",
@@ -686,7 +686,7 @@ strip_cat_fPV = func_marker_dotplt.read_markers_dotplot(
     lineage="fPV")
 
 os.chdir(marker_dotplot_output_dir)
-func_marker_dotplt.dot_plot_with_umap_stack(
+func_marker_dotplt.dot_plot_umap_stack_marker(
     fPV_subcluster['GEX'],
     prot_anndata=fPV_subcluster['ADT'],
     groupby="sub_lin2",
@@ -718,7 +718,7 @@ strip_cat_dS = func_marker_dotplt.read_markers_dotplot(
     lineage="dS")
 
 os.chdir(marker_dotplot_output_dir)
-func_marker_dotplt.dot_plot_with_umap_stack(
+func_marker_dotplt.dot_plot_umap_stack_marker(
     dS_subcluster['GEX'],
     prot_anndata=dS_subcluster['ADT'],
     groupby="sub_lin2",

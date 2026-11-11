@@ -1004,7 +1004,10 @@ def boxplot_DA_lin(lin_freq_file,
 
 
 
-def dot_plot_with_umap_stack(
+# NOTE: general-purpose version (configurable dot size exponent, text scale and stroke width).
+# A different function with a similar purpose, dot_plot_umap_stack_marker() in Func_Marker_dotplot_fig.py,
+# adds a UMAP title with the total cell count; the two are intentionally kept separate.
+def dot_plot_umap_stack_general(
     rna_anndata,
     prot_anndata=None,
     groupby="Final_cluster",
