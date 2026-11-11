@@ -20,7 +20,8 @@ suppressPackageStartupMessages({
 
 
 ```{r load functions}
-source('helpful_functions/2_IPA_Helpful_functions.R')
+code_dir="/projects/Pregnancy_placenta/Code_Publication/R/"
+source(paste0(code_dir, "Functions/2_IPA_Helpful_functions.R"))
 
 ```
 
@@ -261,7 +262,7 @@ df_merged[grepl("fPV2",df_merged$Cluster_fixed),]$Cluster_fixed ="fPV_2"
 df_merged[grepl("fPV3",df_merged$Cluster_fixed),]$Cluster_fixed ="fPV_3"
 ```
 
-# Section 3 - Sup Figure 6: DM1 and FGR
+# Section 3 - Sup Figure 9: DM1 and FGR
 ## Section 3.A - DM1
 ```{r }
 plot_heatmap_single_condition_mainlin(
@@ -316,7 +317,7 @@ plot_heatmap_single_condition_mainlin(
 
 ```
 
-# Section 4 - Sup Fig5C- PTB vs labored and unlabored
+# Section 4 - Sup Fig7C- PTB vs labored and unlabored
 
 ```{r plot}
 plot_heatmap_single_condition_mainlin(
@@ -342,7 +343,7 @@ plot_heatmap_single_condition_mainlin(
 
 ```
 
-# Section 5 - SupFig5E - TermPE and PrePE vs Control LAbored 
+# Section 5 - SupFig7E - TermPE and PrePE vs Control LAbored 
 ```{r }
 plot_heatmap_single_control_mainlin(
   df_comp_merged = df_merged,
@@ -369,7 +370,7 @@ plot_heatmap_single_control_mainlin(
 
 
 ```
-# Section 6 - SupFig5D- PrePE vs Cont PTB
+# Section 6 - SupFig7D- PrePE vs Cont PTB
 
 ```{r}
 plot_heatmap_single_control_mainlin(

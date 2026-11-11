@@ -1,3 +1,4 @@
+# Supp Fig 10I-J) Myeloid DE and DA summary heatmaps
 code_dir="/projects/Pregnancy_placenta/Code_Publication/R/"
 source(paste0(code_dir, "Functions/figure_functions.R"))
 setwd("/projects/Pregnancy_placenta/Results/22_Final_figures/SuppFigure_7/DEG_count/")

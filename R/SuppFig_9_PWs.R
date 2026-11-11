@@ -44,7 +44,7 @@ merged_pw = read_excel(paste0(code_path_PAL,"/AUX_files/DM1_merged_PW_annotation
 merged_pw= merged_pw[,c("Pathway","Annotation")]
 
 #========================================================
-# SupFig X- pathway enrichment in DM1
+# SupFig 9 (panel TBD) - pathway enrichment in DM1
 #========================================================
 
 df_canonical = read.table(paste0(code_path, "AUX_files/IPA_res_sublin_canonical_pathways.txt"), sep="\t", header =1)
@@ -124,7 +124,7 @@ plot_heatmap_PW(df_comp_merged=DM1_df,
 
 
 #========================================================
-# SupFig X- pathway enrichment in FGR
+# SupFig 9 (panel TBD) - pathway enrichment in FGR
 #========================================================
 merged_pw = read_excel(paste0(code_path_PAL,"/AUX_files/DM1_merged_PW_annotation_v3.xlsx"))%>%
   select(Pathway, Annotation) %>%

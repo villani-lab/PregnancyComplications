@@ -1,8 +1,9 @@
-# Supplemental Figure 5: other control analyses
+# Supplemental Figure 7: other control analyses
 
 # Section 1: Load helper functions
 
-source("helpful_functions/funcs_supfig5_supfig6.R")
+code_dir="/projects/Pregnancy_placenta/Code_Publication/R/"
+source(paste0(code_dir, "Functions/funcs_supfig5_supfig6.R"))
 
 
 # Section 2: Prepare Pathway Dataframes
@@ -222,7 +223,7 @@ df_merged[grepl("fFB1",df_merged$Cluster_fixed),]$Cluster_fixed ="fFB_1"
 df_merged[grepl("fPV2",df_merged$Cluster_fixed),]$Cluster_fixed ="fPV_2"
 df_merged[grepl("fPV3",df_merged$Cluster_fixed),]$Cluster_fixed ="fPV_3"
 
-# Sup Fig5C- sPTB vs labored and unlabored
+# Sup Fig7C- sPTB vs labored and unlabored
 
 plot_heatmap_single_condition_mainlin(
   df_comp_merged = df_merged,
@@ -246,7 +247,7 @@ plot_heatmap_single_condition_mainlin(
 )
 
 
-# SupFig5D- PrePE vs Cont PTB
+# SupFig7D- PrePE vs Cont PTB
 
 plot_heatmap_single_control_mainlin(
   df_comp_merged = df_merged,
@@ -274,7 +275,7 @@ plot_heatmap_single_control_mainlin(
 
 
 
-# SupFig5E - TermPE and PrePE vs Control LAbored
+# SupFig7E - TermPE and PrePE vs Control LAbored
 plot_heatmap_single_control_mainlin(
   df_comp_merged = df_merged,
   control_int = "Cont_labored",

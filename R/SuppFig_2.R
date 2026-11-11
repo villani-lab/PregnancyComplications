@@ -1,3 +1,4 @@
+# Supp Fig 2) CellTypist comparison
 # ------ dir org
 setwd("/projects/Pregnancy_placenta/Results/22_Final_figures/SuppFigure_2_celltypist/")
 

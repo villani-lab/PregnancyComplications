@@ -1,8 +1,9 @@
-# Supplemental Figure 6: DM1 and FGR
+# Supplemental Figure 9: DM1 and FGR
 
 # Section 1: Load helper functions
 
-source("helpful_functions/funcs_supfig5_supfig6.R")
+code_dir="/projects/Pregnancy_placenta/Code_Publication/R/"
+source(paste0(code_dir, "Functions/funcs_supfig5_supfig6.R"))
 
 
 # Section 2: Prepare Pathway Dataframes
@@ -220,7 +221,7 @@ df_merged[grepl("fFB1",df_merged$Cluster_fixed),]$Cluster_fixed ="fFB_1"
 df_merged[grepl("fPV2",df_merged$Cluster_fixed),]$Cluster_fixed ="fPV_2"
 df_merged[grepl("fPV3",df_merged$Cluster_fixed),]$Cluster_fixed ="fPV_3"
 
-# SupFig 6D: DM1 and FGR
+# SupFig 9D: DM1 and FGR
 
 plot_heatmap_single_condition_mainlin(
   df_comp_merged = df_merged,

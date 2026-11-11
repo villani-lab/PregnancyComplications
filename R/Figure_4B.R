@@ -1,3 +1,4 @@
+# Figure 4B) PTB pathway enrichment heatmap
 # Heatmap of IPA pathways enrichemnt results in PTB vs cont_PTB across cell types
 
 code_dir="/projects/Pregnancy_placenta/Code_Publication/R/"

@@ -1,3 +1,4 @@
+# Figure 3D) Pathway enrichment across conditions (shared pathways dotplot)
 # ------------------------------------------------------------
 # Recreate a dot-plot from summary_parent_lin_P0.25_Z2.xlsx  with explicit pathway selection (matches the figure)
 # Group separators are based on the Annotation column.
