@@ -12,7 +12,11 @@ suppressPackageStartupMessages({
 
 # This functions shows the expression of genes that are part of an IPa pathway that came up as significant.
 # It will not work if the pathway is not significant for the specific condition and cell type that are given, so double check that if it fails.
-get_log2fc_of_pathway_genes = function(pathway, #pathway of interest
+# NOTE: this version reads the IPA export files from disk itself (<cell_type>-<condition>_vs_<control>-diseases.xls,
+# falling back to the "-PW.xls" canonical-pathway file, in loc_of_IPA_gene_files). A different function with a
+# similar purpose that works on an already-loaded IPA data frame is get_log2fc_of_pathway_genes_from_df()
+# in funcs_gene_pathway.R; the two are intentionally kept separate and have different arguments.
+get_log2fc_of_pathway_genes_from_IPA_files = function(pathway, #pathway of interest
                                        cell_type,
                                        condition,
                                        control,
@@ -84,7 +88,7 @@ plot_heatmap_genes = function(PW_list, condition, control, cell_subsets, width=5
     for(cell_type in cell_subsets)
     {
       print(cell_type)
-      curr_df = get_log2fc_of_pathway_genes(pathway = PW,
+      curr_df = get_log2fc_of_pathway_genes_from_IPA_files(pathway = PW,
                                   cell_type = cell_type,
                                   condition = condition,
                                   control = control,

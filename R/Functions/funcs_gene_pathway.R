@@ -28,7 +28,11 @@ read_pathway_genes = function(cell_type,
   return(file_int)
 }
 
-get_log2fc_of_pathway_genes = function(path_int, #pathway of interest
+# NOTE: this version takes an already-loaded IPA results data frame (df_pathway_genes, "diseases" or canonical
+# pathway table selected with diseases_or_pathway). A different function with a similar purpose that reads the
+# IPA export files from disk itself is get_log2fc_of_pathway_genes_from_IPA_files() in figure_functions.R;
+# the two are intentionally kept separate and have different arguments.
+get_log2fc_of_pathway_genes_from_df = function(path_int, #pathway of interest
                                        df_pathway_genes, #IPA results, has pathway info and molecules
                                        cell_type,
                                        condition,
@@ -156,7 +160,7 @@ get_pathway_gene_heatmap_mats = function(path_of_interest,
       else{
         df$pathway_score[iter] = temp_all_pathways_cond_int[pathway_hits, ]$`z-score`[1]
       }
-      log2_df = get_log2fc_of_pathway_genes(
+      log2_df = get_log2fc_of_pathway_genes_from_df(
         path_int = path_of_interest,
         df_pathway_genes = temp_all_pathways_cond_int,
         cell_type = df$cell_type[iter],
