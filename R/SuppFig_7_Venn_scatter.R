@@ -10,7 +10,6 @@
 # VCTccc), and five complications. The scatter requires adjusted P < 0.25 and numeric Z-scores
 # against both controls; colored points also pass both Z-score cutoffs. Reusable input checks
 # and formatting are in Functions/SuppFig_7_Venn_helper.R.
-# (This analysis was labelled "Figure S6" in the original code; it is Supp Fig 7 in the revised paper.)
 
 # Preparing Packages and Functions ----
 suppressPackageStartupMessages({

@@ -3,9 +3,8 @@
 # This script runs all 14 samples through DAPI segmentation, protein background correction, cell
 # classification and cross-K analysis of CD8A+/Granzyme B+ T cells and CD274+ macrophages.
 # The helper modules are in Functions/ (figs11_segmentation_helpers.py, figs11_analysis_helpers.py)
-# and the final threshold JSON is AuxFiles/figs11_thresholds.json (originally FigS11_code/run_figs11.py
-# and its folder). It produces per-sample outputs and combined result tables. Sample information and
-# reported statistics are provided in Table S20.
+# and the final threshold JSON is AuxFiles/figs11_thresholds.json. It produces per-sample outputs and
+# combined result tables. Sample information and reported statistics are provided in Table S20.
 """Run Figure S11 for every sample in AuxFiles/figs11_thresholds.json.
 
 Run: python SuppFig_11.py --run-id FigS11_run1

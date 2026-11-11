@@ -27,7 +27,7 @@ This repository contains the code used to generate the figures of the paper, spl
 | Folder | Content |
 |---|---|
 | [`Python/`](Python) | Python scripts and notebooks for figures and tables, plus helper functions, auxiliary files and environments |
-| [`R code/`](R%20code) | R scripts for figures and tables *(being reorganized)* |
+| [`R/`](R) | R scripts for figures and tables, plus helper functions and auxiliary files |
 
 ### Python
 
@@ -40,11 +40,16 @@ This repository contains the code used to generate the figures of the paper, spl
 | `AuxFiles/` | Auxiliary input files (marker gene lists, condition lists, thresholds, ...) |
 | `environments/` | Package lists of the environments used |
 
-Figure and table numbers follow the **revised** version of the paper.
+Figure and table numbers follow the numbering in the paper.
 
 ### R
 
-*To be added once the R code is reorganized.*
+| Folder / file | Content |
+|---|---|
+| `Figure_*.R` | Main figure panels, named by figure/panel |
+| `SuppFig_*.R` | Supplementary figures |
+| `Functions/` | Helper functions sourced by the figure code |
+| `AUX_files/` | Auxiliary input files (IPA results, DE/DA statistics, pathway annotations) |
 
 ### How to run
 
