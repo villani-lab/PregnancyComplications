@@ -67,9 +67,10 @@ The analyses were run in different environments, so each notebook/script should 
 
 | Environment | Used for | File |
 |---|---|---|
-| CellTypist | SuppFig_2 (CellTypist comparison) | `Python/environments/celltypist_env.txt` |
-| pregnancy_placenta (general single-cell; Python 3.8) | Figure_1/3/4/6 scripts, Figure_2_dotplots, Figure_4A-C, Figure_5A_C-E, SuppFig_1/7/8/9/10 | `Python/environments/pregnancy_placenta_env.txt` |
-| spatial_env (Visium) | Figure_1H-I, Figure_2_Visium, Figure_4D-F, Figure_6 + SuppFig_10 Visium notebook, SuppFig_4, SuppFig_5, SuppTable_6 | *to be added* |
-| SuppFig_11 (Cellpose / MACSima) | SuppFig_11.py | *to be added* |
+| Single-cell env | Figure_1, 3, 4 and 6 scripts; Figure_2_dotplots, Figure_4A-C, Figure_5A_C-E; SuppFig_1, 7, 8, 9, 10 | `Python/environments/pregnancy_placenta_env.txt` |
+| CellTypist | SuppFig_2 | `Python/environments/celltypist_env.txt` |
+| Spatial environment - Visium | Figure_1H-I, Figure_2_Visium, Figure_4D-F, Figure_6 + SuppFig_10 Visium notebook, SuppFig_4, SuppFig_5, SuppTable_6 | `Python/environments/cell2loc_env2.yml` |
+| MACSima / CellPose | SuppFig_11 | `Python/environments/figs11_env.yml` |
+| R environment (R 4.2.2) | All R scripts and notebooks in `R/` | `R/environments/R_env.txt` |
 
-The files are `pip freeze` lists: `pip install -r Python/environments/<file>`. `pregnancy_placenta_env.txt` installs `pseudobulk` from GitHub (villani-lab/pseudobulk, pinned commit) and GPU builds of torch (CUDA 12.1). R environment: *to be added*.
+The Python `.txt` files are `pip freeze` lists (`pip install -r Python/environments/<file>`); the `.yml` files are conda environments (`conda env create -f Python/environments/<file>`). `R/environments/R_env.txt` lists the R packages and versions as `package==version`. `pregnancy_placenta_env.txt` installs `pseudobulk` from GitHub (villani-lab/pseudobulk, pinned commit) and GPU builds of torch (CUDA 12.1).

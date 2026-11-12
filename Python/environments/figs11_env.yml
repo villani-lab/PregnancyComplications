@@ -1,0 +1,25 @@
+# Shared segmentation/analysis environment.
+# Analysis pins come from requirements-analysis.txt; Cellpose from the shared run record.
+# Unpinned IO/geometry dependencies are recorded in each run's environment.lock.txt.
+name: figs11
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - anndata==0.11.4
+      - geopandas==1.0.1
+      - pyproj==3.6.1
+      - numpy==2.2.6
+      - pandas==2.3.3
+      - scipy==1.18.1
+      - numba==0.68.0
+      - matplotlib==3.11.2
+      - tifffile==2026.9.20
+      - imagecodecs==2026.8.16
+      - shapely
+      - scikit-image
+      - pyarrow
+      - cellpose==4.0.6
+      - setuptools<81
